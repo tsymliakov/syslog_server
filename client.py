@@ -6,9 +6,9 @@ from threading import Thread
 def tcp_client():
     for _ in range(5):
         host = '127.0.0.1'
-        port = 9999
+        port = 8000
 
-        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
         try:
             client_socket.connect((host, port))
